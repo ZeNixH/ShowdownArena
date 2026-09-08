@@ -1,0 +1,385 @@
+# =============================================================================
+# Unreal Engine 5 - .gitignore
+# =============================================================================
+# Keep in Git:
+#   Content/
+#   Config/
+#   Source/
+#   Plugins/        (except generated Binaries/Intermediate)
+#   *.uproject
+#   *.uplugin
+#
+# Ignore:
+#   Generated files
+#   Build artifacts
+#   Caches
+#   IDE files
+#   Local user settings
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Unreal Engine - Generated directories
+# -----------------------------------------------------------------------------
+
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Generated directories inside plugins
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+Plugins/**/DerivedDataCache/
+Plugins/**/Saved/
+
+
+# -----------------------------------------------------------------------------
+# Unreal Engine - Generated files
+# -----------------------------------------------------------------------------
+
+*.opensdf
+*.sdf
+*.suo
+*.VC.db
+*.VC.opendb
+*.VC.db-shm
+*.VC.db-wal
+
+# Unreal generated solution/project files
+*.sln
+*.sln.DotSettings.user
+
+# Visual Studio generated project files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Unreal-generated make/project metadata
+*.xcodeproj
+*.xcworkspace
+*.code-workspace
+
+
+# -----------------------------------------------------------------------------
+# Unreal Engine - Build / Packaging artifacts
+# -----------------------------------------------------------------------------
+
+# Packaging output directories
+Packaged/
+Packaging/
+BuildOutput/
+Builds/
+Dist/
+Release/
+
+# Unreal crash reports
+crashinfo--*
+CrashReportClient/
+
+# Profiling / automation output
+Profiling/
+Automation/
+Logs/
+
+# Generated debug symbols / executables
+*.pdb
+*.ipdb
+*.iobj
+*.obj
+*.exp
+*.lib
+*.ilk
+*.exe
+*.dll
+*.app
+*.dylib
+*.so
+
+# Unreal packaged files
+*.pak
+*.ucas
+*.utoc
+*.sig
+
+
+# -----------------------------------------------------------------------------
+# Shader / Derived caches
+# -----------------------------------------------------------------------------
+
+*.ushadercache
+*.upipelinecache
+
+ShaderDebugInfo/
+ShaderWorkingDir/
+
+
+# -----------------------------------------------------------------------------
+# Visual Studio
+# -----------------------------------------------------------------------------
+
+.vs/
+
+# VS Code local files
+.vscode/
+
+# Uncomment if you intentionally want shared VS Code settings:
+# !.vscode/
+# .vscode/*
+# !.vscode/settings.json
+# !.vscode/extensions.json
+# !.vscode/launch.json
+# !.vscode/tasks.json
+
+
+# -----------------------------------------------------------------------------
+# JetBrains Rider / IntelliJ
+# -----------------------------------------------------------------------------
+
+.idea/
+*.sln.iml
+
+# Rider generated Unreal project model
+.idea/**
+.idea/.idea.*/
+
+
+# -----------------------------------------------------------------------------
+# Visual Studio / MSBuild caches
+# -----------------------------------------------------------------------------
+
+Debug/
+DebugGame/
+Development/
+Shipping/
+Test/
+
+x64/
+x86/
+Win32/
+ARM/
+ARM64/
+
+*.tlog
+*.lastbuildstate
+*.log
+*.cache
+*.user
+*.userosscache
+*.sln.docstates
+
+
+# -----------------------------------------------------------------------------
+# C / C++ temporary files
+# -----------------------------------------------------------------------------
+
+*.o
+*.lo
+*.la
+*.a
+*.lai
+*.pch
+*.gch
+*.d
+*.dep
+*.idb
+*.ncb
+*.res
+*.tmp
+*.temp
+
+
+# -----------------------------------------------------------------------------
+# CMake / Ninja - if used by external tools
+# -----------------------------------------------------------------------------
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+build.ninja
+.ninja_deps
+.ninja_log
+
+
+# -----------------------------------------------------------------------------
+# Windows
+# -----------------------------------------------------------------------------
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+
+$RECYCLE.BIN/
+
+*.stackdump
+
+# Windows shortcuts
+*.lnk
+
+
+# -----------------------------------------------------------------------------
+# macOS
+# -----------------------------------------------------------------------------
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Icon?
+._*
+
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+# -----------------------------------------------------------------------------
+# Linux
+# -----------------------------------------------------------------------------
+
+*~
+.directory
+.Trash-*
+.nfs*
+
+
+# -----------------------------------------------------------------------------
+# Editors
+# -----------------------------------------------------------------------------
+
+# Vim
+*.swp
+*.swo
+*.swn
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+
+
+# -----------------------------------------------------------------------------
+# Temporary / backup files
+# -----------------------------------------------------------------------------
+
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+*.tmp
+*.temp
+*.autosave
+*.swp
+*.lock
+
+# Unreal autosaves / backups
+Autosaves/
+Backup/
+
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+
+
+# -----------------------------------------------------------------------------
+# Node.js - useful if project contains tooling/web services
+# -----------------------------------------------------------------------------
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/cache/
+.pnpm-store/
+
+
+# -----------------------------------------------------------------------------
+# Environment / local secrets
+# -----------------------------------------------------------------------------
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Never commit certificates / private keys
+*.pem
+*.key
+*.pfx
+*.p12
+
+
+# -----------------------------------------------------------------------------
+# Local project / developer settings
+# -----------------------------------------------------------------------------
+
+*.user
+*.userprefs
+
+# Local IDE histories
+.history/
+
+# Local temporary folders
+Temp/
+tmp/
+
+
+# -----------------------------------------------------------------------------
+# Unreal Engine source build artifacts
+# -----------------------------------------------------------------------------
+# Relevant if the Unreal Engine source itself is inside/near the repository.
+
+Engine/Binaries/
+Engine/DerivedDataCache/
+Engine/Intermediate/
+Engine/Saved/
+
+
+# -----------------------------------------------------------------------------
+# DO NOT IGNORE
+# -----------------------------------------------------------------------------
+# These Unreal files are intentionally NOT ignored:
+#
+# *.uproject
+# *.uplugin
+# *.uasset
+# *.umap
+#
+# Content/
+# Config/
+# Source/
+#
+# They are part of the actual game/project and should normally be versioned.
+# -----------------------------------------------------------------------------
